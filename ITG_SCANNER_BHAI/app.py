@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from flask_netlify import Netlify
 
 app = Flask(__name__)
-netlify = Netlify(app)
 
 # Load stock symbols from CSV file
 with open('sc_stocks.csv', 'r') as file:
