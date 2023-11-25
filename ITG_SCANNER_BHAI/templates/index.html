@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Stock Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Checker</h1>
+        <form action="/check_stock" method="post">
+            <label for="stock_name">Enter Stock Symbol:</label>
+            <input type="text" id="stock_name" name="stock_name" required>
+            <button type="submit">Check</button>
+        </form>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+ 
